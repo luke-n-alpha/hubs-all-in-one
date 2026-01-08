@@ -1,4 +1,4 @@
-# hubs-all-in-one (한글) | [hubs-all-in-one (English)](./README.md)
+# hubs-all-in-one (한글) | [English](./README.md)
  * 본 프로젝트는 [BELIVVR](https://belivvr.com)에서 [hubs](https://github.com/Hubs-Foundation) 프로젝트를 fork하여 추가 기능을 개발하고, Hubs의 Room, Scene의 자원들을 회원제로 별도의 회원제 클라우드로 서비스를 제공하는 것을 목표 했던 XRCLOUD(https://xrcloud.app) 오픈소스 프로젝트의 서브 프로젝트 입니다.
  * hubs-all-in-one은 BELIVVR 에서 만든 hubs프로젝트를 단일 호스트에서 실행하는 프로젝트 입니다.
  * 2025년 2월, BELIVVR는 기업의 운영이 어려워 추가 개발을 진행하지 않으므로 오픈 소스(https://github.com/belivvr/xrcloud) 로 공개 합니다.
@@ -32,7 +32,7 @@
 
   ## 점프 (hubs)
   * 데스크톱 모드에서 J 키를 누르면 아바타가 점프합니다.
-     * 참고 : 풀바디 아바타는 점프 시 y값이 지면으로 초기화되어 점프할 수 없습니다.\
+     * 참고 : 풀바디 아바타는 점프 시 y값이 지면으로 초기화되어 점프할 수 없습니다.
    
      <img src="./docs/images/hubs_jump.png" alt="hubs의 점프 개선선">
  
