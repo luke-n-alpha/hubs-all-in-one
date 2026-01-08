@@ -1,0 +1,15 @@
+[submodule "dialog"]
+	path = dialog
+	url = https://github.com/luke-n-alpha/dialog.git
+
+[submodule "hubs"]
+	path = hubs
+	url = https://github.com/luke-n-alpha/hubs.git
+
+[submodule "reticulum"]
+	path = reticulum
+	url = https://github.com/luke-n-alpha/reticulum.git
+
+[submodule "spoke"]
+	path = spoke
+	url = https://github.com/luke-n-alpha/spoke.git

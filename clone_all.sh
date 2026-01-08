@@ -37,8 +37,8 @@ if [ -z "$2" ] || [ "$2" == "dialog" ]; then
 
   mkdir -p ./dialog/certs
   rm -rf ./dialog/certs/*.pem
-  cp $SSL_CERT_FILE ./dialog/certs/cert.pem
-  cp $SSL_KEY_FILE ./dialog/certs/key.pem
+  cp -L $SSL_CERT_FILE ./dialog/certs/cert.pem
+  cp -L $SSL_KEY_FILE ./dialog/certs/key.pem
   cp $PERMS_PUB_FILE ./dialog/certs/perms.pub.pem
 fi
 
@@ -53,8 +53,8 @@ if [ -z "$2" ] || [ "$2" == "hubs" ]; then
   echo $SSL_CERT_FILE 
   echo $SSL_KEY_FILE
 
-  cp $SSL_CERT_FILE ./hubs/certs/cert.pem
-  cp $SSL_KEY_FILE ./hubs/certs/key.pem
+  cp -L $SSL_CERT_FILE ./hubs/certs/cert.pem
+  cp -L $SSL_KEY_FILE ./hubs/certs/key.pem
 
   echo "Copying and replacing variables in hubs/env.template to create hubs/.env"
   cp_and_replace ./hubs/env.template ./hubs/.env
@@ -70,8 +70,8 @@ if [ -z "$2" ] || [ "$2" == "hubs" ]; then
 
   mkdir -p ./reticulum/certs
   rm -rf ./reticulum/certs/*.pem
-  cp $SSL_CERT_FILE ./reticulum/certs/cert.pem
-  cp $SSL_KEY_FILE ./reticulum/certs/key.pem
+  cp -L $SSL_CERT_FILE ./reticulum/certs/cert.pem
+  cp -L $SSL_KEY_FILE ./reticulum/certs/key.pem
   cp $PERMS_PRV_FILE ./reticulum/certs/perms.prv.pem
 
   rm -rf ./reticulum/.env
@@ -88,8 +88,8 @@ if [ -z "$2" ] || [ "$2" == "hubs" ]; then
 
   mkdir -p ./spoke/certs
   rm -rf ./spoke/certs/*.pem
-  cp $SSL_CERT_FILE ./spoke/certs/cert.pem
-  cp $SSL_KEY_FILE ./spoke/certs/key.pem
+  cp -L $SSL_CERT_FILE ./spoke/certs/cert.pem
+  cp -L $SSL_KEY_FILE ./spoke/certs/key.pem
 
   cp_and_replace ./spoke/env.template ./spoke/.env.prod
   cp_and_replace ./spoke/nginx.template ./spoke/nginx.conf
