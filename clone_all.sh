@@ -33,7 +33,7 @@ clone_repo() {
 # If the second parameter is not provided or is 'dialog', execute dialog
 if [ -z "$2" ] || [ "$2" == "dialog" ]; then
   # dialog
-  clone_repo "https://github.com/belivvr/dialog.git" "dialog"
+  clone_repo "https://github.com/luke-n-alpha/dialog.git" "dialog"
 
   mkdir -p ./dialog/certs
   rm -rf ./dialog/certs/*.pem
@@ -45,7 +45,7 @@ fi
 # If the second parameter is not provided or is 'hubs', execute everything except dialog
 if [ -z "$2" ] || [ "$2" == "hubs" ]; then
   # hubs
-  clone_repo "https://github.com/belivvr/hubs.git" "hubs"
+  clone_repo "https://github.com/luke-n-alpha/hubs.git" "hubs"
 
   mkdir -p ./hubs/certs
   rm -rf ./hubs/certs/*.pem
@@ -66,7 +66,7 @@ if [ -z "$2" ] || [ "$2" == "hubs" ]; then
   cp_and_replace ./hubs/admin/nginx.conf.template ./hubs/admin/nginx.conf
 
   # reticulum
-  clone_repo "https://github.com/belivvr/reticulum.git" "reticulum"
+  clone_repo "https://github.com/luke-n-alpha/reticulum.git" "reticulum"
 
   mkdir -p ./reticulum/certs
   rm -rf ./reticulum/certs/*.pem
@@ -84,7 +84,7 @@ if [ -z "$2" ] || [ "$2" == "hubs" ]; then
   cp_and_replace ./reticulum/.vscode/launch.json.template ./reticulum/.vscode/launch.json
 
   # spoke
-  clone_repo "https://github.com/belivvr/spoke.git" "spoke"
+  clone_repo "https://github.com/luke-n-alpha/spoke.git" "spoke"
 
   mkdir -p ./spoke/certs
   rm -rf ./spoke/certs/*.pem

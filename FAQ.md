@@ -4,7 +4,7 @@
 
 방의 주인은 토큰을 가지고있는(로그인이 되어있는, 토큰이 로컬스토리지에 저장되어있는) 유저가 방을 생성했을때 그 방의 주인이 된다.
 
-![image](https://github.com/belivvr/hubs-all-in-one/assets/59630175/dab4ef84-ca9e-49dc-842c-f82ef33786ac)
+![image](https://github.com/luke-n-alpha/hubs-all-in-one/assets/59630175/dab4ef84-ca9e-49dc-842c-f82ef33786ac)
 
 ### 추가 개발한 기능
 1. 방 자동 확장 기능 (개발 에단) (현재 사용 X)

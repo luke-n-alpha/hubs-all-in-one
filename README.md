@@ -1,13 +1,13 @@
 # hubs-all-in-one (English) | [한글](./README_ko.md)
 * This project is a sub-project of the XRCLOUD (https://xrcloud.app) open source project by [BELIVVR](https://belivvr.com), which aimed to develop additional features by forking the [hubs](https://github.com/Hubs-Foundation) project and provide Hubs' Room and Scene resources as a membership-based cloud service.
 * hubs-all-in-one is a project that runs BELIVVR's hubs project on a single host.
-* As of February 2025, BELIVVR has decided not to continue further development due to business challenges and has released it as open source (https://github.com/belivvr/xrcloud).
+* As of February 2025, BELIVVR has decided not to continue further development due to business challenges and has released it as open source (https://github.com/luke-n-alpha/xrcloud).
 * This is a detailed documentation service for partners who have been provided with development services, and it aims to contribute to the web metaverse open-source ecosystem, albeit in a small way.
 * Please note that we did not have the capacity to send separate PRs to HubsFoundation, and the XRCLOUD service has secured servers that can be operated until September 2025, but there are no confirmed plans for the service thereafter. Technical support will be provided to partners who have been promised service until December 2025.
 * For further inquiries, please contact the former CEO of BELIVVR, Byungseok Yang (luke.yang@cafelua.com).
 
 # Installation and Operation Method
-* Please refer to [XRCLOUD Installation and Operation Guide](https://github.com/belivvr/xrcloud/blob/main/docs/installation_guide_en.md).
+* Please refer to [XRCLOUD Installation and Operation Guide](https://github.com/luke-n-alpha/xrcloud/blob/main/docs/installation_guide_en.md).
 
 # License and Patents
 * Subprojects including hubs follow the licenses of their original projects.
@@ -26,7 +26,7 @@
 
 
 ## Full-body Avatar (hubs)
-* Supports [BELIVVR's open-source full-body avatar editor](https://github.com/belivvr/xrcloud-avatar-editor).
+* Supports [BELIVVR's open-source full-body avatar editor](https://github.com/luke-n-alpha/xrcloud-avatar-editor).
   * This avatar project is not designed considering Bit-ecs, so it does not support all features of Hubs.
 
 <img src="./docs/images/xrcloud_fullbody.png" alt="XRCLOUD service full-body avatar">
