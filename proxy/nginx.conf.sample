@@ -1,0 +1,68 @@
+worker_processes 1;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    log_format debug '$remote_addr - $remote_user [$time_local] "$request" '
+                   '$status $body_bytes_sent "$http_referer" '
+                   '"$backend" "$http_x_forwarded_for" '
+                   'request_time=$request_time '
+                   'upstream_response_time=$upstream_response_time '
+                   'upstream_addr=$upstream_addr '
+                   'upstream_status=$upstream_status';
+
+    map $request_uri $backend {
+        ~^/(?<target>(.*))?$ $target;
+    }
+
+    # resolver 127.0.0.1;
+    resolver 8.8.8.8 8.8.4.4;
+
+    server {
+        listen 4080 ssl;
+        server_name example.com;
+        ssl_certificate /etc/nginx/certs/cert.pem;
+        ssl_certificate_key /etc/nginx/certs/key.pem;
+
+        proxy_ssl_server_name on;
+
+        location / {
+            proxy_pass $backend;
+            # proxy_set_header Host $target;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+
+            # 아래와 같이 프락시 버퍼 사이즈를 적당이 늘려준다.
+            proxy_buffer_size          10m;
+            proxy_buffers              4 10m;
+            proxy_busy_buffers_size    10m;
+
+            # Access-Control-Allow-Origin이 두번 들어가는 경우가 있어서 아래의 코드로 중복을 방지한다.
+            proxy_hide_header Access-Control-Allow-Origin;
+
+            # CORS 헤더 추가
+            add_header 'Access-Control-Allow-Methods' '*';
+            add_header 'Access-Control-Allow-Headers' '*';
+            add_header 'Access-Control-Expose-Headers' '*';
+            add_header 'Access-Control-Allow-Origin' '*';
+        }
+
+        error_log /var/log/nginx/error.log debug;
+        access_log /var/log/nginx/access.log debug;
+    }
+
+    server {
+        listen 5000 ssl;
+        server_name example.com;
+
+        ssl_certificate /etc/nginx/certs/cert.pem;
+        ssl_certificate_key /etc/nginx/certs/key.pem;
+
+        location / {
+            proxy_pass http://thumbnail:5000;
+        }
+    }
+}
